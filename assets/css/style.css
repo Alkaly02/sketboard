@@ -297,6 +297,7 @@ main{
   border-radius: 50px;
   padding: 0.4rem;
   border: 1px solid white;
+  transition: all 0.2s ease-in;
 }
 .avatar_container img{
   width: 100%;
@@ -371,18 +372,38 @@ main{
 }
 .most_watched_card{
   position: relative;
+  height: 300px;
   padding-bottom: 1rem;
 }
 .video_play{
   width: 100%;
-  height: 100px;
+  height: 120px;
+  position: relative;
   background-color: rgb(115, 116, 117);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: all 0.5s ease;
+  z-index: 999;
+}
+.video_play .video {
+  /* position: absolute; */
+  /* height: 200; */
+  width: 100%;
+  height: 100%;
+  /* padding-bottom:56.25%; */
+}
+.video video {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 .most_watched_card_body{
   padding: 1rem 2rem;
-  position: relative;
+  position: absolute;
+  bottom: 55px;
 }
 .most_watched_card_body h3{
   font-size: 1.5rem;
@@ -425,15 +446,17 @@ main{
 .most_watched_avatar{
   position: absolute;
   right: 10px;
-  top: -28px;
+  bottom: -20px;
 }
 .most_watched_avatar i{
   /* background-color: #56bcf9;c */
   /* color: #56bcf9; */
 }
 video, iframe{
-  width: 100%;
+  width: 100% !important;
   height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3/1;
 }
 
 /* ************* media queries *************** */
