@@ -86,9 +86,9 @@ main{
 .sidebar_navbar_lists h2{
   color: var(--body-color);
 }
-.sidebar_navbar_lists ul {
+/* .sidebar_navbar_lists ul {
 
-}
+} */
 
 .fa-solid{
   font-size: var(--icon-font-size);
@@ -106,6 +106,13 @@ main{
   font-size: var(--lists-font-size);
   color: var(--body-color);
   font-weight: 600;
+}
+.sidebar_navbar_list {
+  width: 100%;
+  text-decoration: none;
+  color: var(--body-color);
+  display: flex;
+  align-items: center;
 }
 .sidebar_navbar_list > a{
   width: 100%;
@@ -236,6 +243,7 @@ main{
 
 .inside_scroll{
   /* position: relative; */
+  padding: 1rem 0;
 }
 
 /* ***************************** discover ************************** */
@@ -243,6 +251,7 @@ main{
   display: flex;
   gap: 1rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .discover_title{
   top: 0px;
@@ -259,6 +268,7 @@ main{
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.3) 100%) ,
               url('../images/josh-hild-igLQW_yY9oo-unsplash.jpg');
               flex: 2;
+              min-width: 350px;
             }
 .discover_jump_left h2, .discover_jump_right h2{
   font-size: 2.8rem;
@@ -442,6 +452,9 @@ main{
   margin-left: 0.5rem;
   /* position: absolute;
   top: 5px; */
+}
+.orange--dot{
+  background-color: var(--orange-color);
 }
 .most_watched_avatar{
   position: absolute;
