@@ -7,6 +7,24 @@
   /* transition: all 100ms ease; */
   /* color: white; */
 }
+.d-flex{
+  display: flex;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+.align-items-center{
+  align-items: center;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.gap-1{
+  gap: 1rem;
+}
+.gap-2{
+  gap: 2rem;
+}
 :root{
   --orange-color: #ff7551;
   --blue-color: #32a7e2;
@@ -20,6 +38,7 @@
   --delay: 0s;
   --lists-font-size: 1.5rem;
   --icon-font-size: 1.2rem;
+  --chat-bg: #252836;
 }
 
 img{
@@ -51,6 +70,21 @@ body {
   height: 100vh;
   overflow: hidden;
  }
+
+ ::-webkit-scrollbar {
+  width: 5px;
+}
+  ::-webkit-scrollbar-track {
+  background: var(--button-bg); 
+}
+  ::-webkit-scrollbar-thumb {
+  background: var(--body-color ); 
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  
+  background: #555; 
+} 
 
 main{
   display: grid;
@@ -239,6 +273,7 @@ main{
   width: 100%;
   /* background-color: aqua; */
   position: relative;
+  padding: 0 1rem;
 }
 
 .inside_scroll{
@@ -471,6 +506,82 @@ video, iframe{
   object-fit: cover;
   aspect-ratio: 3/1;
 }
+
+/* ************************** trending ************************* */
+.trending{
+  margin-top: 1rem;
+}
+.trending-top--left{
+  flex: 2;
+  min-width: 200px;
+}
+.trending-top--left video{
+  height: 300px;
+  border-radius: 15px;
+}
+.trending-top--right{
+  flex: 1;
+  min-width: 250px;
+  background-color: var(--chat-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  position: relative;
+}
+.chat-header{
+  border-bottom: 1px solid var(--body-color);
+  padding-bottom: 1.5rem;
+  position: sticky;
+  top: 0;
+}
+.chat-header h3{
+  color: white;
+  font-size: calc(0.9rem + 1vw);
+}
+.chat-header p{
+  font-size: calc(0.5rem + 1vw);
+  font-weight: 600;
+}
+.chat-messages .avatar_container{
+  width: 60px;
+  height: 60px;
+}
+.chat-messages{
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 5rem;
+}
+.chat-messages h3{
+  color: white;
+}
+.chat-form{
+  position: absolute;
+  bottom: 10px;
+  /* width: 100%; */
+}
+.chat-form input{
+  padding: 1rem 2rem;
+  background-color: var(--button-bg);
+  outline: none;
+  border: none;
+  width: 100%;
+  color: white;
+}
+.chat-form i{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.chat-form button{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/* .chat-form input::placeholder{
+  color: ;
+} */
 
 /* ************* media queries *************** */
 @media screen and (max-width: 600px) {
