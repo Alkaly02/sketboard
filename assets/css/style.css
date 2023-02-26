@@ -25,6 +25,9 @@
 .gap-2{
   gap: 2rem;
 }
+.mt-2{
+  margin-top: 1rem;
+}
 :root{
   --orange-color: #ff7551;
   --blue-color: #32a7e2;
@@ -201,8 +204,9 @@ main{
 /* **************************** containt *************************** */
 .containt{
   grid-area: containt;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     /* position: relative; */
+    /* margin: 0 0.5rem; */
     overflow-y: hidden;
     height: 100% !important;
     display: flex;
@@ -216,6 +220,8 @@ main{
   display: flex;
   justify-content: space-between;
   position: sticky;
+  top: 0;
+  padding: 0 1rem;
 }
 .header_search-form{
   flex: 1;
@@ -274,6 +280,9 @@ main{
   /* background-color: aqua; */
   position: relative;
   padding: 0 1rem;
+  /* margin: 0.5rem; */
+  display: flex;
+  flex-direction: column;
 }
 
 .inside_scroll{
@@ -485,8 +494,10 @@ main{
   border-radius: 50px;
   margin-top: -35px;
   margin-left: 0.5rem;
-  /* position: absolute;
-  top: 5px; */
+}
+.h3_dot_description{
+  width: 8px;
+  height: 8px;
 }
 .orange--dot{
   background-color: var(--orange-color);
@@ -516,7 +527,7 @@ video, iframe{
   min-width: 200px;
 }
 .trending-top--left video{
-  height: 300px;
+  height: 400px;
   border-radius: 15px;
 }
 .trending-top--right{
@@ -527,13 +538,27 @@ video, iframe{
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  max-height: 500px;
+  max-height: 400px;
   position: relative;
 }
+.trending_description h3{
+  color: white;
+  font-size: 1.8rem;
+}
+.trending-body h4{
+  font-size: 3rem;
+  color: white;
+}
+.trending-body p{
+  font-size: calc(0.5rem + 0.8vw);
+  line-height: 30px;
+}
+
 .chat-header{
   border-bottom: 1px solid var(--body-color);
   padding-bottom: 1.5rem;
-  position: sticky;
+  position: absolute;
+  width: 100%;
   top: 0;
 }
 .chat-header h3{
@@ -541,7 +566,7 @@ video, iframe{
   font-size: calc(0.9rem + 1vw);
 }
 .chat-header p{
-  font-size: calc(0.5rem + 1vw);
+  font-size: calc(0.3rem + 0.8vw);
   font-weight: 600;
 }
 .chat-messages .avatar_container{
