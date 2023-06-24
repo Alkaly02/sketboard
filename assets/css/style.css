@@ -116,7 +116,7 @@ body {
 
 main{
   display: grid;
-  grid-template-columns: minmax(max-content, 150px) 10px 1fr;
+  grid-template-columns: minmax(auto-fill, 150px) 10px 1fr;
   grid-template-areas: 'sidebar . containt' ;
   padding: 1.5rem;
   background-color: var(--theme-bg);
@@ -132,7 +132,7 @@ main{
 .sidebar{
   grid-area: sidebar;
   /* background-color: red; */
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   height: 100% !important;
   overflow-y: auto;
 }
@@ -330,7 +330,7 @@ main{
   background-color: var(--theme-bg);
   box-shadow: 0px 5px 15px var(--theme-bg);
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem 0 0 0;
   color: white;
   font-size: 3rem;
 }
@@ -338,7 +338,7 @@ main{
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.3) 100%) ,
               url('../images/josh-hild-igLQW_yY9oo-unsplash.jpg');
               flex: 2;
-              min-width: 350px;
+              min-width: 200px;
             }
 .discover_jump_left h2, .discover_jump_right h2{
   font-size: 2.8rem;
@@ -733,5 +733,13 @@ video, iframe{
   }
   .sidebar_navbar_list--text{
    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  body{
+    padding: 1rem;
+  }
+  .discover_title{
+    font-size: 2rem;
   }
 }
